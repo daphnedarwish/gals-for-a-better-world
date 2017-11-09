@@ -1,0 +1,2 @@
+@total = params.inject(0) {|sum, (k,v)| sum += v.to_i}
+

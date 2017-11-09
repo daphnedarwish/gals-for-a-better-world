@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html style="background:url('css/images/brick.jpg')";>
+    
+	<head style="background:url('css/images/brick.jpg')";>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+          <!-- Compiled and minified JavaScript -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+	   <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Info</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../../css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+    <body style="background:url('css/images/brick.jpg')";>
+        <nav id="nav" style="background:url('css/images/brick.jpg')">
+            	<ul>
+                <li><a href="/">Back to Home Page</a></li>
+				<li>
+		</nav>
+		<br>
+        <br>
+        <br>
+        <p class="lastScore; question"> Your Last Score: <%= @current_user.score %> out of 28 </p>
+        <br>
+        <form class="form" method="get" action="/results">
+            <input class="regionSubmit" type="submit" value="See Your Answers" style="padding: 10px;" id="btnUser"> 
+        </form>	
+        <br>
+        <br>
+        <p> <%= @message %> </p>
+        <div class="userPage">
+            <h4 class="userPageTitle2">How to Improve Your Footprint</h4>
+            <br>
+            <div class="together">
+                <div class='question together1'>
+                    <h6 class="userPageTitle">transportation</h6>
+                    <p>-whenever possible, use driving alternatives such as: public transportation, bikes, walking</p>
+                    <p>-drive a car with low-carbon emissions, which is NOT the same as high gas mileage</p>
+                    <p>-don't speed or accelerate unneccessarily, as these can reduce your mileage by up to 30%</p>
+                </div>
+                <div class="question together2">
+                    <h6 class="userPageTitle">home</h6>
+                    <p>-try to buy energy efficient appliances (look for the ENERGY STAR label)</p>
+                    <p>-in addition to only using lights when needed, think about switching to LED lights, which are much more energy efficient</p>
+                    <p>-think about installing solar panels in your home if viable - in many states, government subsidies mean that you can 
+                    eliminate your electrical bill altogether or even EARN money by selling energy back to the grid</p>
+                </div>
+                <div class="question together3">
+                    <h6 class="userPageTitle">food</h6>
+                    <p>-try to reduce your meat, especially beef, and dairy intake (this alone can reduce your carbon footprint by 30%!)</p>
+                    <p>-whenever possible eat organic and local - the increase in price is worth the superior quality of food with the additional 
+                    bonus of being better for the Earth</p>
+                    <p>-minimize food waste</p>
+                </div>
+            </div>    
+        </div>    
+    </body>

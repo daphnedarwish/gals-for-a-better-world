@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html style="background:url('css/images/brick.jpg')";>
+    
+	<head>
+		<title>Your Carbon Footprint</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../../css/main.css" />
+		<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="homepage" style="background:url('css/images/brick.jpg')">
+		<div id="page-wrapper">            
+            <nav id="nav">
+            	<ul>
+                <li><a href="/">Back to Home Page</a></li>
+                <br>
+                <br>
+			</nav>
+    	<div class="info">	
+    		<br> 
+    			   <ul>
+    			   		<br>
+    			   		<br>
+    			 	<text class='explaining_option_one'>Good</text>
+    			 	<br>
+    			 	<br>
+    			 	<text class='explaining_option_two'>Average</text>
+    			 	<br>
+    			 	<br>
+    			 	<text class='explaining_option_three'>Bad</text>
+    			</ul> 
+    		
+    		    <ul>
+    		      <% @answers.each do |a| %>
+    		          <li>
+    		          	
+    		          		<div class='question'>
+    		              <%= a.question.question_text %>
+    		              <% selected = a.selected_answer %>
+    		              <% if selected == 2 %>
+    		              	<span class='option_one_answer'><%= a.question.option_one %> </span>
+    		              <% elsif selected == 1 %>
+							<span class='option_two_answer'><%= a.question.option_two %> </span>		              		
+    		              <% elsif selected == 0 %>
+							<span class='option_three_answer'><%= a.question.option_three %> </span>
+						</div>	
+						<% end %>
+    		          </li>
+    		      <% end %>
+                </ul>
+    	</div>	
+	</body>
+
+</html>	
